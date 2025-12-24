@@ -1,3 +1,5 @@
 import { irARecetas } from "./FUNCIONES.js";
-document.getElementById("Pasteleria")
-  .addEventListener("click", () => irARecetas("Pasteleria"));
+const btnCategorias = document.querySelectorAll("button");
+btnCategorias.forEach(btn => {
+  btn.addEventListener("click", () => irARecetas(btn.textContent));
+});
