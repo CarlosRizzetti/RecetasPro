@@ -4,5 +4,6 @@ import { Receta } from "./recetas.js";
 btnCategorias.forEach(btn => {
   btn.addEventListener("click", () => irARecetas(btn.textContent));
 }); */
+
 const receta = new Receta();
 receta.render();

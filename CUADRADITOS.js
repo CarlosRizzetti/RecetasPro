@@ -3,7 +3,7 @@ export const recetas = [
   
  
   {
-    mercaderia: "CUADRADITO DE DULCE DE LECHE",
+    mercaderia: "DULCE DE LECHE",
     ingredientes: [
       { nombre: "AZUCAR SUELTA", cantidad: 0.011 },
       { nombre: "HARINA 0000", cantidad: 0.022 },
@@ -15,7 +15,7 @@ export const recetas = [
     ]
   },
   {
-    mercaderia: "CUADRADITO DE PASTA FROLA",
+    mercaderia: "PASTA FROLA",
     ingredientes: [
       { nombre: "AZUCAR SUELTA", cantidad: 0.011 },
       { nombre: "HARINA 0000", cantidad: 0.022 },
@@ -27,7 +27,7 @@ export const recetas = [
     ]
   },
   {
-    mercaderia: "CUADRADITOS BROWNIES",
+    mercaderia: "BROWNIES",
     ingredientes: [
       { nombre: "LECHE ENTERA", cantidad: 0.009 },
       { nombre: "CHOCOLATE EN BARRA", cantidad: 0.003 },
@@ -45,7 +45,7 @@ export const recetas = [
     ]
   },
   {
-    mercaderia: "CUADRADITOS DE BATATA",
+    mercaderia: "BATATA",
     ingredientes: [
       { nombre: "AZUCAR SUELTA", cantidad: 0.011 },
       { nombre: "HARINA 0000", cantidad: 0.022 },
@@ -57,7 +57,7 @@ export const recetas = [
     ]
   },
   {
-    mercaderia: "CUADRADITOS DE RICOTA Y D.LECHE",
+    mercaderia: "RICOTA Y D.LECHE",
     ingredientes: [
       { nombre: "RICOTTA", cantidad: 0.026 },
       { nombre: "AZUCAR SUELTA", cantidad: 0.015 },
@@ -71,7 +71,7 @@ export const recetas = [
     ]
   },
   {
-    mercaderia: "CUADRADITO PIE DE MANZANACON TAPA",
+    mercaderia: "PIE MANZANA CON TAPA",
     ingredientes: [
       { nombre: "OPORTO", cantidad: 0.001 },
       { nombre: "MANZANA DESHIDRATADA", cantidad: 0.007 },
@@ -89,7 +89,7 @@ export const recetas = [
     ]
   },
   {
-    mercaderia: "CUADRADITO DE MANZANA",
+    mercaderia: "MANZANA",
     ingredientes: [
       { nombre: "LECHE ENTERA", cantidad: 0.0045 },
       { nombre: "CREMA DE LECHE AL 39 %", cantidad: 0.0078},
@@ -105,7 +105,7 @@ export const recetas = [
     ]
   },
   {
-    mercaderia: "CUADRADITO DE RICOTTA",
+    mercaderia: "RICOTTA",
     ingredientes: [
       { nombre: "RICOTTA", cantidad: 0.046485261 },
       { nombre: "AZUCAR SUELTA", cantidad: 0.011256236 },
@@ -118,7 +118,7 @@ export const recetas = [
     ]
   },
   {
-    mercaderia: "CUADRADITO DE DULCE DE LECHE (VARIANTE COCO)",
+    mercaderia: "DULCE DE LECHE Y COCO",
     ingredientes: [
       { nombre: "AZUCAR SUELTA", cantidad: 0.011 },
       { nombre: "HARINA 0000", cantidad: 0.022 },
@@ -176,7 +176,7 @@ export const recetas = [
  
   
   {
-    mercaderia: "CUADRADITOS DE RICOTA Y F/ROJOS",
+    mercaderia: "RICOTA Y F/ROJOS",
     ingredientes: [
       { nombre: "RICOTTA", cantidad: 0.026 },
       { nombre: "AZUCAR SUELTA", cantidad: 0.015 },
@@ -190,7 +190,7 @@ export const recetas = [
     ]
   },
   {
-    mercaderia: "Carrot cake",
+    mercaderia: "CARROT CAKE",
     ingredientes: [
       { nombre: "Huevo (KG)", cantidad: 0.007 },
       { nombre: "Azucar", cantidad: 0.011 },
@@ -206,7 +206,7 @@ export const recetas = [
     ]
   },
   {
-    mercaderia: "Pasta  frola de chocolate",
+    mercaderia: "FROLA DE CHOCOLATE",
     ingredientes: [
       { nombre: "AZUCAR SUELTA", cantidad: 0.011 },
       { nombre: "HARINA 0000", cantidad: 0.022 },

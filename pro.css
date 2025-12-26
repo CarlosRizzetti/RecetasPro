@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+}
+main{
+    width: 90%;
+    margin: auto;
+   
+}
+#lista-recetas {
+    width: 100%;
+    margin-top: 20px;
+    display: grid;    
+}
+.receta-item {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    border-radius: 5px;
+}
+label {
+    width: 70%;
+    border: 1px solid #000;
+    align-items: start;
+}
+input{
+    width: 20%;
+    height: 100%;
+    border: 1px solid #000;
+}

@@ -1,15 +1,15 @@
+import { recetas } from "./CUADRADITOS.js";
 import { irARecetas, mostrarRecetas } from "./FUNCIONES.js";
+
 export class Receta {
-    constructor() { }
-
-
+    constructor() {}
     render() {
         const url = window.location
         const params = window.location.search
         const allparams = new URLSearchParams(params)
         const sector = allparams.get("sector")
         const containerRecetas = document.querySelector("#recetas-container")
-
+        const listaRecetas = document.querySelector("#lista-recetas")
         console.log(sector, allparams, url);
 
 
@@ -20,14 +20,24 @@ export class Receta {
             <button id="recetas-container_Masa">Masa</button>
             <button id="recetas-container_Masa de chocolate">Masa de chocolate</button>
             `;
+        }
             const btn = document.querySelectorAll("button");
             console.log(btn);
             btn.forEach(boton => {
                 boton.addEventListener("click", () => {
-                    mostrarRecetas(boton.textContent)
+                    if (boton.id === "recetas-container_Cuadraditos") {
+                        recetas.forEach(receta => {
+                            listaRecetas.innerHTML +=
+                                `<section class="receta-item">
+                             <label>${receta.mercaderia}</label> 
+                             <input type="number" id="${receta.mercaderia}_cantidad" >
+                             </section>`;
+                        });
+
+                    }
                 })
             })
-        }
+        
     }
 
 
