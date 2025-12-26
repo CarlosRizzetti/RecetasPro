@@ -1,4 +1,3 @@
-import { irARecetas } from "./FUNCIONES.js";
 import { Receta } from "./recetas.js";
 /* const btnCategorias = document.querySelectorAll("button");
 btnCategorias.forEach(btn => {

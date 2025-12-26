@@ -1,7 +1,9 @@
 import { recetas } from "./CUADRADITOS.js";
-import { irARecetas, mostrarRecetas } from "./FUNCIONES.js";
+
 import {budines} from "./BUDINES.js";
-   import {masa} from "./MASA.js";
+import {masa} from "./MASA.js";
+import {containerRecetas, listaRecetas} from "./CONST.js";
+import { botonElegido } from "./FUNCIONES.js";
     
 
 export class Receta {
@@ -11,9 +13,8 @@ export class Receta {
         const params = window.location.search
         const allparams = new URLSearchParams(params)
         const sector = allparams.get("sector")
-        const containerRecetas = document.querySelector("#recetas-container")
-        const listaRecetas = document.querySelector("#lista-recetas")
-        console.log(sector, allparams, url);
+        
+        
 
 
         if (sector === "Pasteleria") {
@@ -27,45 +28,14 @@ export class Receta {
             const btn = document.querySelectorAll("button");
            
             btn.forEach(boton => {
-                boton.addEventListener("click", () => {
-                    listaRecetas.innerHTML = "";
-                    if (boton.id === "recetas-container_Cuadraditos") {
-                        recetas.forEach(receta => {
-                            listaRecetas.innerHTML +=
-                                `<section class="receta-item">
-                             <label>${receta.mercaderia}</label> 
-                             <input type="number" id="${receta.mercaderia}_cantidad" >
-                             </section>`;
-                        });
-
-                    }
-                    if (boton.id === "recetas-container_Budines") {
-                        budines.forEach(receta => {
-                            listaRecetas.innerHTML +=
-                                `<section class="receta-item">
-                             <label>${receta.mercaderia}</label> 
-                             <input type="number" id="${receta.mercaderia}_cantidad" >
-                             </section>`;
-                        });
-                    }
-                    if (boton.id === "recetas-container_Masa") {
-                        listaRecetas.innerHTML = `<section id="masa-section"><label id="masa_cantidad_label">Cantidad de masa</label>
-                        <input type="number" id="masa_cantidad"></section>`;
-                        masa.forEach(ingrediente => {
-                            listaRecetas.innerHTML +=
-                                `<section class="receta-item">
-                             <label>${ingrediente.nombre}</label> 
-                             <input type="number" id="${ingrediente.nombre}_cantidad" >
-                             </section>`;
-                        }); 
-                    }
-                })
+                botonElegido(boton);
             })
         
     }
 
 
 }
+
 
 
 
