@@ -22,23 +22,11 @@ export function botonElegido(boton) {
        boton.addEventListener("click", () => {
                     listaRecetas.innerHTML = "";
                     if (boton.id === "recetas-container_Cuadraditos") {
-                        recetas.forEach(receta => {
-                            listaRecetas.innerHTML +=
-                                `<section class="receta-item">
-                             <label>${receta.mercaderia}</label> 
-                             <input type="number" id="${receta.mercaderia}_cantidad" >
-                             </section>`;
-                        });
+                        agregarBotones(recetas);
 
                     }
                     if (boton.id === "recetas-container_Budines") {
-                        budines.forEach(receta => {
-                            listaRecetas.innerHTML +=
-                                `<section class="receta-item">
-                             <label>${receta.mercaderia}</label> 
-                             <input type="number" id="${receta.mercaderia}_cantidad" >
-                             </section>`;
-                        });
+                        agregarBotones(budines);
                     }
                     if (boton.id === "recetas-container_Masa") {
                         listaRecetas.innerHTML = `<section id="masa-section"><label id="masa_cantidad_label">Cantidad de masa</label>
@@ -56,4 +44,17 @@ export function botonElegido(boton) {
                     }
                 })
 }
+/* export function abrirVentanaImpresion() {
+    window.open("HojadeImpresion.html", "_blank");
+} */
+function agregarBotones(boton){    
+   boton.forEach(receta => {
+   listaRecetas.innerHTML +=
+    `<section class="receta-item">
+     <label>${receta.mercaderia}</label> 
+     <input type="number" id="${receta.mercaderia}_cantidad" >
+     </section>`;
+   });
 
+                    
+}
