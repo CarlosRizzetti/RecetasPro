@@ -42,6 +42,16 @@ export function botonElegido(boton) {
                              `;
                         }); 
                     }
+                    /* if (boton.id === "calcular-masa") {
+                        const cantidadMasa = document.querySelector("#masa_cantidad").value;
+                        tablaResultado.innerHTML = "";
+                        masa.forEach(ingrediente => {
+                            console.log(ingrediente);
+                            tablaResultado.innerHTML += `
+                            <tr><td class="nombre-ingrediente">${ingrediente.nombre}</td>
+                            <td class="cantidad-ingrediente">${Number(ingrediente.cantidad)*Number(cantidadMasa)}</td></tr>`;
+                        });
+                    } */
                 })
 }
 /* export function abrirVentanaImpresion() {
@@ -55,6 +65,11 @@ function agregarBotones(boton){
      <input type="number" id="${receta.mercaderia}_cantidad" >
      </section>`;
    });
-
                     
+}
+btnCalcularMasa.addEventListener("click", () => {
+    abrirReceta();
+});
+function abrirReceta() {
+    window.open(`hojaDeImpresion.html`, "_blank");
 }

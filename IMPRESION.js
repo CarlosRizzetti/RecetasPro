@@ -1,9 +1,8 @@
 import { hojaImpresionContainer } from "./CONST";
 document.addEventListener("DOMContentLoaded", () => {
 
-    hojaImpresionContainer.innerHTML = `<section class="receta-item">
-                             <label>${ingrediente.nombre}</label> 
-                             <p>${ingrediente.cantidad}</p>
-                             </section>
-                             `;
+    const params = new URLSearchParams(window.location.search);
+    const sector = params.get("sector");
+    console.log(hojaImpresionContainer);
+    hojaImpresionContainer.innerHTML = `<h1>Receta de ${sector}</h1>`;
 });
