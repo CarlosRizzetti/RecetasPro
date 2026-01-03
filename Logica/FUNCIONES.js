@@ -1,7 +1,7 @@
 import { recetas } from "../Logica/CUADRADITOS.js";
 import { listaRecetas,btnCalcularMasa} from "../Logica/CONST.js";
 import { budines } from "../Logica/BUDINES.js";
-import { masa } from "../Logica/MASA.js";
+import { Masa } from "../Logica/MASA.js";
 
 export function botonElegido(boton) {
        boton.addEventListener("click", () => {
@@ -14,6 +14,7 @@ export function botonElegido(boton) {
                              <input type="number" id="${receta.mercaderia}_cantidad" >
                              </section>`;
                         });
+                        btnCalcularMasa.innerHTML=`<a href="hojaDeImpresion.html?sector=recetas" target="_blank">Calcular </a>`;
 
                     }
                     if (boton.id === "recetas-container_Budines") {
@@ -24,20 +25,20 @@ export function botonElegido(boton) {
                              <input type="number" id="${receta.mercaderia}_cantidad" >
                              </section>`;
                         });
+                        btnCalcularMasa.innerHTML=`<a href="hojaDeImpresion.html?sector=budines" target="_blank">Calcular </a>`;
                     }
                     if (boton.id === "recetas-container_Masa") {
                         listaRecetas.innerHTML = `<section id="masa-section"><label id="masa_cantidad_label">Cantidad de masa</label>
-                        <input type="number" id="masa_cantidad"></section>`;
-                        masa.forEach(ingrediente => {
-                            const cantidadMasa = document.querySelector("#masa_cantidad").value;
-                            listaRecetas.innerHTML +=
+                        <input type="number" id="masaCantidad"></section>`;
+                        Masa.forEach(ingrediente => {
+                             listaRecetas.innerHTML +=
                                 `<section class="receta-item">
                              <label>${ingrediente.nombre}</label> 
-                             <p>${Number(ingrediente.cantidad)*Number(cantidadMasa)}</p>
+                             <p>${Number(ingrediente.cantidad)}</p>
                              </section>
                              `;
                         }); 
-                        btnCalcularMasa.innerHTML=`<a href="hojaDeImpresion.html?sector=Masa" target="_blank">Calcular Masa</a>`;
+                        btnCalcularMasa.innerHTML=`<a href="hojaDeImpresion.html?sector=Masa" target="_blank">Calcular</a>`;
                     }
                 })
 }

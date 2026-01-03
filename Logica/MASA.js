@@ -5,5 +5,5 @@ export const Masa = [
   { nombre: 'Azucar',             cantidad: 0.14083020 },
   { nombre: 'Polvo de Hornear',   cantidad: 0.01408302 },
   { nombre: 'Esencia Vainilla',   cantidad: 0.00245894 },
-  { nombre: 'Conservante (Mix Propionato + Sorbato)', cantidad: 0.0312956 }
+  { nombre: 'Conservantes', cantidad: 0.0312956 }
 ];
