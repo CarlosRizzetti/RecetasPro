@@ -1,4 +1,4 @@
-export const masa = [
+export const Masa = [
   { nombre: 'Harina 0000',        cantidad: 0.46898692 },
   { nombre: 'Huevo',              cantidad: 0.14083020 },
   { nombre: 'Margarina',          cantidad: 0.23605824 },

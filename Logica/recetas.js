@@ -1,13 +1,6 @@
-import { recetas } from "./CUADRADITOS.js";
-import {budines} from "./BUDINES.js";
-import {masa} from "./MASA.js";
-import {containerRecetas, listaRecetas,hojaImpresionContainer,btnCalcularMasa} from "./CONST.js";
-import {botonElegido} from "./FUNCIONES.js";
-import {mostrarRecetas} from "./FUNCIONES.js";
+import {containerRecetas,hojaImpresionContainer,btnCalcularMasa} from "../Logica/CONST.js";
+import {botonElegido} from "../Logica/FUNCIONES.js";    
 
-    
-console.log(hojaImpresionContainer)
-console.log(btnCalcularMasa);
 export class Receta {
     constructor() {}
     render() {
@@ -25,7 +18,6 @@ export class Receta {
         }
             const btn = document.querySelectorAll("button");           
             btn.forEach(boton => {
-                console.log(boton);
                 botonElegido(boton);
             })        
     }
