@@ -2,7 +2,7 @@ import { recetas } from "../Logica/CUADRADITOS.js";
 import { listaRecetas,btnCalcularMasa} from "../Logica/CONST.js";
 import { budines } from "../Logica/BUDINES.js";
 import { Masa } from "../Logica/MASA.js";
-
+let cantidad=0;
 export function botonElegido(boton) {
        boton.addEventListener("click", () => {
                     listaRecetas.innerHTML = "";
@@ -30,6 +30,8 @@ export function botonElegido(boton) {
                     if (boton.id === "recetas-container_Masa") {
                         listaRecetas.innerHTML = `<section id="masa-section"><label id="masa_cantidad_label">Cantidad de masa</label>
                         <input type="number" id="masaCantidad"></section>`;
+                      
+                       
                         Masa.forEach(ingrediente => {
                              listaRecetas.innerHTML +=
                                 `<section class="receta-item">
@@ -38,10 +40,12 @@ export function botonElegido(boton) {
                              </section>
                              `;
                         }); 
-                        btnCalcularMasa.innerHTML=`<a href="hojaDeImpresion.html?sector=Masa" target="_blank">Calcular</a>`;
+                        btnCalcularMasa.innerHTML=`<a href="hojaDeImpresion.html?sector=Masa&cantidad=${cantidad}" target="_blank">Calcular</a>`;
                     }
                 })
 }
+
+
 /* export function irARecetas(sector) {
     window.location.href = `recetas.html?sector=${sector}`;
 }

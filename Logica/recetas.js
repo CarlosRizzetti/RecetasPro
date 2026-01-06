@@ -12,7 +12,7 @@ export class Receta {
             containerRecetas.innerHTML += `
             <button id="recetas-container_Cuadraditos">Cuadraditos</button>
             <button id="recetas-container_Budines">Budines</button>
-            <button id="recetas-container_Masa">Masa</button>
+            <button id="recetas-container_Masa"><a href="hojaDeImpresion.html?sector=Masa" target="_blank">Masa</a></button>
             <button id="recetas-container_Masa de chocolate">Masa de chocolate</button>
             `;
         }

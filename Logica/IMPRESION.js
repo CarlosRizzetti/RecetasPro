@@ -1,23 +1,36 @@
-import { hojaImpresionContainer,inputCantidadMasa } from "../Logica/CONST.js";
+import { hojaImpresionContainer, inputCantidadMasa,listaRecetas } from "../Logica/CONST.js";
 import { Masa } from "../Logica/MASA.js";
 document.addEventListener("DOMContentLoaded", () => {
-console.log(inputCantidadMasa)
+    console.log(inputCantidadMasa)
     const params = new URLSearchParams(window.location.search);
     const sector = params.get("sector");
     console.log(hojaImpresionContainer);
-    hojaImpresionContainer.innerHTML = `<h1>Receta de ${sector}</h1>`;
+    hojaImpresionContainer.innerHTML = `<p id="titulo-receta">Receta de ${sector}</p>`;
 
-    if (sector === "Masa") {        
-            Masa.forEach(ingrediente => {
-                hojaImpresionContainer.innerHTML += `
+    if (sector === "Masa") {
+        Masa.forEach(ingrediente => {  
+            const cantidad = inputCantidadMasa.value;                                 
+            hojaImpresionContainer.innerHTML += `
                 <section class="receta-item">
                     <label>${ingrediente.nombre}</label> 
-                    <p>${Number(ingrediente.cantidad)*Number(inputCantidadMasa.value)}</p>
+                    <p>${ingrediente.cantidad}</p>
                 </section>
                 `;
-            });
-        }
-
+        });
+    }
+inputCantidadMasa.addEventListener("input", (e) => {
+    e.preventDefault();
+    hojaImpresionContainer.innerHTML =''
+     Masa.forEach(ingrediente => {  
+            const cantidad = inputCantidadMasa.value;                                 
+            hojaImpresionContainer.innerHTML += `
+                <section class="receta-item">
+                    <label>${ingrediente.nombre}</label> 
+                    <p>${Number(ingrediente.cantidad)*Number(cantidad)}</p>
+                </section>                
+                `;
+        });
+});
 
 
 
