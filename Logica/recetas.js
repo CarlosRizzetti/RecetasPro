@@ -10,10 +10,10 @@ export class Receta {
         const sector = allparams.get("sector")
         if (sector === "Pasteleria") {
             containerRecetas.innerHTML += `
-            <button id="recetas-container_Cuadraditos">Cuadraditos</button>
-            <button id="recetas-container_Budines">Budines</button>
+            <button id="recetas-container_Cuadraditos"><a href="hojaDeImpresion.html?sector=Cuadraditos" target="_blank">Cuadraditos</a></button></button>
+            <button id="recetas-container_Budines"><a href="hojaDeImpresion.html?sector=Budines" target="_blank">Budines</a></button></button>
             <button id="recetas-container_Masa"><a href="hojaDeImpresion.html?sector=Masa" target="_blank">Masa</a></button>
-            <button id="recetas-container_Masa de chocolate">Masa de chocolate</button>
+            <button id="recetas-container_Masa de chocolate"><a href="hojaDeImpresion.html?sector=Masa de chocolate" target="_blank">Masa de chocolate</a></button></button>
             `;
         }
             const btn = document.querySelectorAll("button");           

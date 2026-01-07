@@ -1,14 +1,26 @@
-import { hojaImpresionContainer, inputCantidadMasa,listaRecetas } from "../Logica/CONST.js";
+import { hojaImpresionContainer, inputCantidadMasa,listaRecetas,DescripcionProducto } from "../Logica/CONST.js";
 import { Masa } from "../Logica/MASA.js";
+import { MasaDeChocolate } from "../Logica/MASA_DE_CHOCOLATE.JS";
 document.addEventListener("DOMContentLoaded", () => {
     console.log(inputCantidadMasa)
     const params = new URLSearchParams(window.location.search);
     const sector = params.get("sector");
     console.log(hojaImpresionContainer);
-    hojaImpresionContainer.innerHTML = `<p id="titulo-receta">Receta de ${sector}</p>`;
+    DescripcionProducto.innerHTML = `<p id="titulo-receta">Receta de ${sector}</p>`;
 
     if (sector === "Masa") {
         Masa.forEach(ingrediente => {  
+            const cantidad = inputCantidadMasa.value;                                 
+            hojaImpresionContainer.innerHTML += `
+                <section class="receta-item">
+                    <label>${ingrediente.nombre}</label> 
+                    <p>${ingrediente.cantidad}</p>
+                </section>
+                `;
+        });
+    }
+    if (sector === "Masa de chocolate") {
+        MasaDeChocolate.forEach(ingrediente => {  
             const cantidad = inputCantidadMasa.value;                                 
             hojaImpresionContainer.innerHTML += `
                 <section class="receta-item">
@@ -22,11 +34,14 @@ inputCantidadMasa.addEventListener("input", (e) => {
     e.preventDefault();
     hojaImpresionContainer.innerHTML =''
      Masa.forEach(ingrediente => {  
-            const cantidad = inputCantidadMasa.value;                                 
+            const cantidad = inputCantidadMasa.value;
+            let ing=ingrediente.cantidad;
+            let total= Number(ing)*Number(cantidad);
+            console.log(total.toFixed(2));                                 
             hojaImpresionContainer.innerHTML += `
                 <section class="receta-item">
                     <label>${ingrediente.nombre}</label> 
-                    <p>${Number(ingrediente.cantidad)*Number(cantidad)}</p>
+                    <p>${total.toFixed(2)}</p>
                 </section>                
                 `;
         });
