@@ -1,6 +1,7 @@
-import { hojaImpresionContainer, inputCantidadMasa,listaRecetas,DescripcionProducto } from "../Logica/CONST.js";
+import { hojaImpresionContainer, inputCantidadMasa,listaRecetas,DescripcionProducto, DescripcionProductoInput } from "../Logica/CONST.js";
 import { Masa } from "../Logica/MASA.js";
 import { MasaDeChocolate } from "../Logica/MASA_DE_CHOCOLATE.JS";
+import { recetas } from "../Logica/CUADRADITOS.js";
 document.addEventListener("DOMContentLoaded", () => {
     console.log(inputCantidadMasa)
     const params = new URLSearchParams(window.location.search);
@@ -30,6 +31,20 @@ document.addEventListener("DOMContentLoaded", () => {
                 `;
         });
     }
+    if(sector==="Cuadraditos"){
+        DescripcionProductoInput.innerHTML = '';
+         hojaImpresionContainer.innerHTML='<section id="recetas-lista"></section>';
+         const listaRecetas=document.getElementById("recetas-lista");
+        recetas.forEach(receta => {  
+            listaRecetas.innerHTML += `
+                <button class="btn-receta-item">${receta.mercaderia}</button>
+                `;
+        })
+
+
+
+
+    }
 inputCantidadMasa.addEventListener("input", (e) => {
     e.preventDefault();
     hojaImpresionContainer.innerHTML =''
@@ -46,13 +61,6 @@ inputCantidadMasa.addEventListener("input", (e) => {
                 `;
         });
 });
-
-
-
-
-
-
-
 });
 
 

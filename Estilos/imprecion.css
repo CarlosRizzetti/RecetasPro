@@ -14,7 +14,7 @@ header {
     height: 15vh;
     font-size: 1.2em;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     background-color: #f8f8f8;
     border-bottom: 1px solid #ddd;
@@ -35,32 +35,10 @@ main {
     align-items: center;    
     text-align: center;   
 }
-
-#recetas-container {
-    width: 100%;
-    height: 10vh;
-    margin: 2% 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#recetas-container button {
-    width: 100%;
-    height: 10vh;
-    margin: 10px;
-    font-size: 2em;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
 #lista-recetas {
     width: 100%;
     height: auto;
-
 }
-
 .receta-item {
     width: 40%;
     height: auto;
@@ -73,21 +51,30 @@ main {
 p {
     width: 30%;
     height: 100%;
-    font-size: 1.5em;
+    font-size: 1em;
     border: 1px solid #000;
+    text-align: center;
 }
 
-#masa-section {
+#masa-section, #masa-section-input {
     width: 100%;
     height: 10vh;
     display: flex;
     justify-content: start;
     align-items: center;
-    border-radius: 5px;
-    margin-bottom: 1%;
+    border-radius: 5px;    
     text-align: center;
     font-size: 2em;
 
+}
+.btn-receta-item{
+    width: 10%;
+    height: 7vh;  
+    margin: 0; 
+    border: 1px solid #000;
+    background-color: #e0e0e0;
+    cursor: pointer;
+    font-size: 0.5em;
 }
 
 label {
@@ -105,34 +92,28 @@ input {
     text-align: center;
     font-size: 1.5em;
 }
-
 section {
     width: 100%;
     height: 5vh;
 }
-
-
-
 .receta-item {
     width: 70%;
     height: auto;
-    display: flex;
-    
+    display: flex;    
     justify-content: space-around;
     align-items: center;
     text-align: center;
 }
-
-masa_cantidad_label {
-    width: 70%;
-    height: 100%;
-    display: flex;
-    justify-content: start;
+#recetas-lista{
+    width: 100%;
+    height: 100%;   
+    display: flex;    
+    justify-content: center;
     align-items: center;
 }
 .contenedor-item-impresion {
     width: 100%;
-    min-height: 50vh;
+    min-height: auto;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -147,4 +128,19 @@ masa_cantidad_label {
 }
 #titulo-receta{
     width: 100%;
+}
+#hoja-impresion-container{
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;    
+    text-align: center;   
+}
+#lista-recetas{
+    width: 100%;
+    min-height: auto;
+    
+    margin-top: 2%;
 }
