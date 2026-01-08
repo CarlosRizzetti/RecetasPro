@@ -22,7 +22,7 @@ header {
 
 main {
     width: 90%;
-    height: auto;
+    height: 100vh;
     margin: 2% 5%; 
 
 }
@@ -56,7 +56,18 @@ p {
     text-align: center;
 }
 
-#masa-section, #masa-section-input {
+#titulo-receta {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    border-radius: 5px;    
+    text-align: center;
+    font-size: 2em;
+
+}
+#masa-section-input{
     width: 100%;
     height: 10vh;
     display: flex;
@@ -65,7 +76,7 @@ p {
     border-radius: 5px;    
     text-align: center;
     font-size: 2em;
-
+    top: 0;
 }
 .btn-receta-item{
     width: 10%;
@@ -74,7 +85,7 @@ p {
     border: 1px solid #000;
     background-color: #e0e0e0;
     cursor: pointer;
-    font-size: 0.5em;
+    font-size: 0.7em;
 }
 
 label {
@@ -92,10 +103,7 @@ input {
     text-align: center;
     font-size: 1.5em;
 }
-section {
-    width: 100%;
-    height: 5vh;
-}
+
 .receta-item {
     width: 70%;
     height: auto;
@@ -126,9 +134,7 @@ section {
     font-size: 1.5em;
     margin-top: 2%;
 }
-#titulo-receta{
-    width: 100%;
-}
+
 #hoja-impresion-container{
     width: 100%;
     min-height: 100%;

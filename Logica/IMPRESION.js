@@ -1,4 +1,4 @@
-import { hojaImpresionContainer, inputCantidadMasa,listaRecetas,DescripcionProducto, DescripcionProductoInput } from "../Logica/CONST.js";
+import { hojaImpresionContainer, inputCantidadMasa,listaRecetas,header, DescripcionProductoInput } from "../Logica/CONST.js";
 import { Masa } from "../Logica/MASA.js";
 import { MasaDeChocolate } from "../Logica/MASA_DE_CHOCOLATE.JS";
 import { recetas } from "../Logica/CUADRADITOS.js";
@@ -7,7 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const params = new URLSearchParams(window.location.search);
     const sector = params.get("sector");
     console.log(hojaImpresionContainer);
-    DescripcionProducto.innerHTML = `<p id="titulo-receta">Receta de ${sector}</p>`;
+    header.innerHTML = `<section id="titulo-receta">Receta de ${sector}</section    > 
+    <button onclick="window.print()" id="btnImprimir">Imprimir</button> `;
 
     if (sector === "Masa") {
         Masa.forEach(ingrediente => {  
