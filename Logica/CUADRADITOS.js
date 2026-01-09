@@ -1,32 +1,20 @@
-export const recetas = [
-  
-  
- 
+export const recetas = [ 
   {
+    id: 1,
     mercaderia: "DULCE DE LECHE",
     ingredientes: [
-      { nombre: "AZUCAR SUELTA", cantidad: 0.011 },
-      { nombre: "HARINA 0000", cantidad: 0.022 },
-      { nombre: "POLVO PARA HORNEAR", cantidad: 0.001 },
-      { nombre: "HUEVOS", cantidad: 0.005 },
-      { nombre: "MARGARINA", cantidad: 0.011 },
-      { nombre: "DLECHE REPOSTERO PERGAMINO", cantidad: 0.035 },
-      { nombre: "ESENCIA DE VAINILLA", cantidad: 0.001 }
+      { nombre: "DLECHE REPOSTERO PERGAMINO", cantidad: 0.035 },      
     ]
   },
   {
+    id: 2,
     mercaderia: "PASTA FROLA",
-    ingredientes: [
-      { nombre: "AZUCAR SUELTA", cantidad: 0.011 },
-      { nombre: "HARINA 0000", cantidad: 0.022 },
-      { nombre: "POLVO PARA HORNEAR", cantidad: 0.001 },
-      { nombre: "HUEVOS", cantidad: 0.005 },
-      { nombre: "DULCE DE MEMBRILLO", cantidad: 0.035 },
-      { nombre: "MARGARINA", cantidad: 0.011 },
-      { nombre: "ESENCIA DE VAINILLA", cantidad: 0.001 }
+    ingredientes: [      
+      { nombre: "DULCE DE MEMBRILLO", cantidad: 0.035 },     
     ]
   },
   {
+    id: 3,
     mercaderia: "BROWNIES",
     ingredientes: [
       { nombre: "LECHE ENTERA", cantidad: 0.009 },
@@ -45,32 +33,24 @@ export const recetas = [
     ]
   },
   {
+    id: 4,
     mercaderia: "BATATA",
-    ingredientes: [
-      { nombre: "AZUCAR SUELTA", cantidad: 0.011 },
-      { nombre: "HARINA 0000", cantidad: 0.022 },
-      { nombre: "POLVO PARA HORNEAR", cantidad: 0.001 },
-      { nombre: "HUEVOS", cantidad: 0.005 },
-      { nombre: "DULCE DE BATATA", cantidad: 0.035 },
-      { nombre: "MARGARINA", cantidad: 0.011 },
-      { nombre: "ESENCIA DE VAINILLA", cantidad: 0.001 }
+    ingredientes: [     
+      { nombre: "DULCE DE BATATA", cantidad: 0.035 },      
     ]
   },
   {
+    id: 5,
     mercaderia: "RICOTA Y D.LECHE",
     ingredientes: [
       { nombre: "RICOTTA", cantidad: 0.026 },
-      { nombre: "AZUCAR SUELTA", cantidad: 0.015 },
-      { nombre: "HARINA 0000", cantidad: 0.018 },
-      { nombre: "POLVO PARA HORNEAR", cantidad: 0.001 },
-      { nombre: "HUEVOS", cantidad: 0.004 },
-      { nombre: "MARGARINA", cantidad: 0.009 },
-      { nombre: "DLECHE REPOSTERO PERGAMINO", cantidad: 0.026 },
-      { nombre: "CREMA DE LECHE POTE FAMILIAR", cantidad: 0.0 },
+      { nombre: "AZUCAR SUELTA", cantidad: 0.015 },     
+      { nombre: "DLECHE REPOSTERO PERGAMINO", cantidad: 0.026 },     
       { nombre: "ESENCIA DE VAINILLA", cantidad: 0.001 }
     ]
   },
   {
+    id: 6,
     mercaderia: "PIE MANZANA CON TAPA",
     ingredientes: [
       { nombre: "OPORTO", cantidad: 0.001 },
@@ -89,6 +69,7 @@ export const recetas = [
     ]
   },
   {
+    id: 7,
     mercaderia: "MANZANA",
     ingredientes: [
       { nombre: "LECHE ENTERA", cantidad: 0.0045 },
@@ -105,6 +86,7 @@ export const recetas = [
     ]
   },
   {
+    id: 8,
     mercaderia: "RICOTTA",
     ingredientes: [
       { nombre: "RICOTTA", cantidad: 0.046485261 },
@@ -118,19 +100,15 @@ export const recetas = [
     ]
   },
   {
-    mercaderia: "DULCE DE LECHE Y COCO",
-    ingredientes: [
-      { nombre: "AZUCAR SUELTA", cantidad: 0.011 },
-      { nombre: "HARINA 0000", cantidad: 0.022 },
-      { nombre: "POLVO PARA HORNEAR", cantidad: 0.007 },
-      { nombre: "HUEVOS", cantidad: 0.005 },
-      { nombre: "MARGARINA", cantidad: 0.011 },
-      { nombre: "DLECHE REPOSTERO PERGAMINO", cantidad: 0.035 },
-      { nombre: "ESENCIA DE VAINILLA", cantidad: 0.005 },
+    id: 9,
+    mercaderia: "DDL Y COCO",
+    ingredientes: [      
+      { nombre: "DLECHE REPOSTERO PERGAMINO", cantidad: 0.035 },      
       { nombre: "COCO RALLADO", cantidad: 0.180 }
     ]
   },
   {
+    id: 10,
     mercaderia: "HAVANET",
     ingredientes: [
       { nombre: "Harina 0000", cantidad: 0.022 },
@@ -146,6 +124,7 @@ export const recetas = [
     ]
   },
   {
+    id: 11,
     mercaderia: "MARROC",
     ingredientes: [
       { nombre: "Harina 0000", cantidad: 0.007 },
@@ -160,6 +139,7 @@ export const recetas = [
     ]
   },
   {
+    id: 12,
     mercaderia: "HAVANET BLANCO",
     ingredientes: [
       { nombre: "Harina 0000", cantidad: 0.007 },
@@ -176,6 +156,7 @@ export const recetas = [
  
   
   {
+    id: 13,
     mercaderia: "RICOTA Y F/ROJOS",
     ingredientes: [
       { nombre: "RICOTTA", cantidad: 0.026 },
@@ -190,6 +171,7 @@ export const recetas = [
     ]
   },
   {
+    id: 14,
     mercaderia: "CARROT CAKE",
     ingredientes: [
       { nombre: "Huevo (KG)", cantidad: 0.007 },
@@ -206,6 +188,7 @@ export const recetas = [
     ]
   },
   {
+    id: 15,
     mercaderia: "FROLA DE CHOCOLATE",
     ingredientes: [
       { nombre: "AZUCAR SUELTA", cantidad: 0.011 },
@@ -220,6 +203,7 @@ export const recetas = [
   },
   
   {
+    id: 16,
     mercaderia: "CHOCOTORTA",
     ingredientes: [
       { nombre: "HARINA 0000", cantidad: 0.0081 },
