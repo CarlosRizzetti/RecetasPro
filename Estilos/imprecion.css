@@ -23,7 +23,7 @@ header {
 main {
     width: 90%;
     height: 100vh;
-    margin: 2% 5%; 
+    margin: 0 5%; 
 
 }
 .contenedor-main {
@@ -132,7 +132,7 @@ input {
     width: 20%;
     height: 50px; 
     font-size: 1.5em;
-    margin-top: 2%;
+   
 }
 
 #hoja-impresion-container{

@@ -1,8 +1,8 @@
 import { recetas } from "../Logica/CUADRADITOS.js";
-import { listaRecetas, btnCalcularMasa, hojaImpresionContainer } from "../Logica/CONST.js";
+import { listaRecetas, btnCalcularMasa, hojaImpresionContainer, hijo } from "../Logica/CONST.js";
 import { budines } from "../Logica/BUDINES.js";
 import { Masa } from "../Logica/MASA.js";
-let cantidad = 0;
+
 export function botonElegido(boton) {
     boton.addEventListener("click", () => {
         listaRecetas.innerHTML = "";
@@ -47,6 +47,7 @@ export function botonElegido(boton) {
 export function mostrarRecetaDeMasa(cantidad) {
     cantidad.addEventListener("input", (e) => {
         e.preventDefault();
+         console.log(e.target.value);
         hojaImpresionContainer.innerHTML = ''
         Masa.forEach(ingrediente => {
             const cantidad = e.target.value;
@@ -61,11 +62,26 @@ export function mostrarRecetaDeMasa(cantidad) {
         });
     });
 }
-
-
-
-
-
+export function mostrarRecetaDeCuadraditos(cantidadDeCuadraditos) {    
+    cantidadDeCuadraditos.addEventListener("input", (e) => {
+        e.preventDefault();
+        console.log(e.target.value);
+        hijo.innerHTML = ''
+        recetas.forEach(receta => {
+            receta.ingredientes.forEach(ingrediente => {
+                const cantidadCuadraditos = e.target.value;
+                let ing = ingrediente.cantidad;
+                let total = Number(ing) * Number(cantidadCuadraditos);           
+                hijo.innerHTML += `
+                    <section class="receta-item">
+                        <label>${ingrediente.nombre}</label> 
+                        <p>${total.toFixed(2)}</p>
+                    </section>                
+                    `;
+            });
+        });
+    });
+}
 
 
 

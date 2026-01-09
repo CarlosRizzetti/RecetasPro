@@ -7,3 +7,6 @@ export const DescripcionProducto = document.querySelector("#masa-section")
 export const DescripcionProductoInput = document.querySelector("#masa-section-input")
 export const header= document.querySelector("header")
 export const contenedorMain= document.querySelector(".contenedor-main")
+export const hijo =document.querySelector('.hijo-receta')
+export const inputCantidadCuadraditos = document.getElementById("masaCantidadCuadraditos")
+console.log(hijo);
