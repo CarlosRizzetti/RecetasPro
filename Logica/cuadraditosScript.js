@@ -1,6 +1,7 @@
-import { contenedorMain,inputCantidadMasa } from "../Logica/CONST.js";
+import { contenedorMain,DescripcionProductoInput,inputCantidadMasa,inputCantidadCuadraditos} from "../Logica/CONST.js";
 import { recetas } from "../Logica/CUADRADITOS.js";
 import { mostrarRecetaDeCuadraditos } from "../Logica/FUNCIONES.js";
+
 export class cuadraditosScript {
     constructor() { }
 
@@ -11,6 +12,7 @@ export class cuadraditosScript {
             btn.addEventListener("click", () => {
                 const hijo = document.createElement("section");
                 hijo.classList.add("hijo-receta");
+                contenedorMain.appendChild(hijo);
                 const recetaBuscada = recetas.filter(r => r.mercaderia.includes(btn.textContent));
                 if (recetaBuscada) {
                     hijo.innerHTML = `                            
@@ -24,19 +26,17 @@ export class cuadraditosScript {
                                    <section class="receta-item">
                                        <label>${ingrediente.nombre}</label> 
                                        <p>${ingrediente.cantidad}</p>
-                                   </section>                
-                                   `;
+                                   </section>  `;
                         });
                     });
-                }
-                 
-                contenedorMain.append(hijo);
-                const inputCantidadCuadraditos = document.getElementById("masaCantidadCuadraditos");
-                mostrarRecetaDeCuadraditos(inputCantidadCuadraditos);
+                }                 
+                            
             });
-        })
+        }) 
         
-
-
+      const ee=DescripcionProductoInput.lastElementChild;
+console.log(ee);
+mostrarRecetaDeCuadraditos(ee) 
     }
 }
+

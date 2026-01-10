@@ -1,5 +1,5 @@
 import { recetas } from "../Logica/CUADRADITOS.js";
-import { listaRecetas, btnCalcularMasa, hojaImpresionContainer, hijo } from "../Logica/CONST.js";
+import { listaRecetas, btnCalcularMasa,DescripcionProductoInput, hojaImpresionContainer, hijo } from "../Logica/CONST.js";
 import { budines } from "../Logica/BUDINES.js";
 import { Masa } from "../Logica/MASA.js";
 
@@ -62,11 +62,12 @@ export function mostrarRecetaDeMasa(cantidad) {
         });
     });
 }
+
 export function mostrarRecetaDeCuadraditos(cantidadDeCuadraditos) {    
     cantidadDeCuadraditos.addEventListener("input", (e) => {
         e.preventDefault();
         console.log(e.target.value);
-        hijo.innerHTML = ''
+        
         recetas.forEach(receta => {
             receta.ingredientes.forEach(ingrediente => {
                 const cantidadCuadraditos = e.target.value;

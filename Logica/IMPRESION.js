@@ -2,8 +2,8 @@ import { hojaImpresionContainer, inputCantidadMasa,inputCantidadCuadraditos, lis
 import { Masa } from "../Logica/MASA.js";
 import { MasaDeChocolate } from "../Logica/MASA_DE_CHOCOLATE.JS";
 import { recetas } from "../Logica/CUADRADITOS.js";
-import { mostrarRecetaDeMasa } from "./FUNCIONES.js";
-import { mostrarRecetaDeCuadraditos } from "../Logica/FUNCIONES.js";
+import { mostrarRecetaDeCuadraditos, mostrarRecetaDeMasa } from "./FUNCIONES.js";
+
 import { cuadraditosScript } from "./cuadraditosScript.js";
 const cuadraditos = new cuadraditosScript();
 document.addEventListener("DOMContentLoaded", () => {    
@@ -34,20 +34,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 `;
         });
     }
-    if (sector === "Cuadraditos") {
-        
-        contenedorMain.innerHTML = '<section id="recetas-lista"></section>';
+    if (sector === "Cuadraditos") {        
+        contenedorMain.innerHTML = '<section id="recetas-lista"></section><section class="hijo-receta"></section>';
         const listaRecetas = document.getElementById("recetas-lista");
         recetas.forEach(receta => {
             listaRecetas.innerHTML += `
                 <button class="btn-receta-item">${receta.mercaderia}</button>
                 `;
         });
-        cuadraditos.render();
-        
-    }
-  
-    
+         cuadraditos.render();    
+ 
+    }  
 });
 
 
