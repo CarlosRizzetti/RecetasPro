@@ -1,11 +1,10 @@
-import { hojaImpresionContainer, inputCantidadMasa,inputCantidadCuadraditos, listaRecetas, header, contenedorMain, DescripcionProductoInput } from "../Logica/CONST.js";
+import { hojaImpresionContainer, inputCantidadMasa, header, contenedorMain } from "../Logica/CONST.js";
 import { Masa } from "../Logica/MASA.js";
 import { MasaDeChocolate } from "../Logica/MASA_DE_CHOCOLATE.JS";
 import { recetas } from "../Logica/CUADRADITOS.js";
-import { mostrarRecetaDeCuadraditos, mostrarRecetaDeMasa } from "./FUNCIONES.js";
-
-import { cuadraditosScript } from "./cuadraditosScript.js";
-const cuadraditos = new cuadraditosScript();
+import { mostrarRecetaDeMasa } from "./FUNCIONES.js";
+import { CuadraditosSeleccionado } from "./FUNCIONES.js";
+ let cantidadCuadraditos;
 document.addEventListener("DOMContentLoaded", () => {    
     const params = new URLSearchParams(window.location.search);
     const sector = params.get("sector");   
@@ -35,16 +34,28 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
     if (sector === "Cuadraditos") {        
-        contenedorMain.innerHTML = '<section id="recetas-lista"></section><section class="hijo-receta"></section>';
+        contenedorMain.innerHTML = '<section id="recetas-lista"></section>';
         const listaRecetas = document.getElementById("recetas-lista");
         recetas.forEach(receta => {
             listaRecetas.innerHTML += `
+            <section class="receta-cuadradito-item">
                 <button class="btn-receta-item">${receta.mercaderia}</button>
+                <input type="number" id="${receta.mercaderia}" placeholder="Cantidad ">
+            </section>
                 `;
         });
-         cuadraditos.render();    
+       
+               
+        contenedorMain.appendChild(hojaImpresionContainer);
+            cantidadCuadraditos = document.querySelectorAll("input[type='number']");
+           CuadraditosSeleccionado(cantidadCuadraditos);
+        cantidadCuadraditos.forEach(input => {
+            input.addEventListener("change", () => {
+                 CuadraditosSeleccionado(cantidadCuadraditos);
+            });
+        });
+    } 
  
-    }  
 });
 
 
@@ -52,23 +63,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
-
-
-
-
-
-/* function mostrarRecetas(nombre) {
-    cuadradito.textContent=`RECETA DE ${nombre}:`;
-    const recetaBuscada = recetas.filter(r => r.mercaderia.includes(nombre));   
-    if (recetaBuscada) {
-        tablaResultado.innerHTML = "";  
-        recetaBuscada.forEach(receta => {
-            receta.ingredientes.forEach(ingrediente => {
-                tablaResultado.innerHTML += `
-                <tr><td class="nombre-ingrediente">${ingrediente.nombre}</td>
-                <td class="cantidad-ingrediente">${Number(ingrediente.cantidad)*Number(cantidadReceta.value)}</td></tr>`;
-            });
-        });
-    }
-} */ 

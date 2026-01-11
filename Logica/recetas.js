@@ -1,5 +1,5 @@
-import {containerRecetas,hojaImpresionContainer,btnCalcularMasa} from "../Logica/CONST.js";
-import {botonElegido} from "../Logica/FUNCIONES.js";    
+import {containerRecetas} from "../Logica/CONST.js";
+  
 
 export class Receta {
     constructor() {}
@@ -16,10 +16,7 @@ export class Receta {
             <button id="recetas-container_Masa de chocolate"><a href="hojaDeImpresion.html?sector=Masa de chocolate" target="_blank">Masa de chocolate</a></button></button>
             `;
         }
-            const btn = document.querySelectorAll("button");           
-            btn.forEach(boton => {
-                botonElegido(boton);
-            })        
+                   
     }
 }
 
