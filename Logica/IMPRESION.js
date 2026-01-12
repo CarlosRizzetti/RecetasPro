@@ -52,6 +52,10 @@ document.addEventListener("DOMContentLoaded", () => {
         cantidadCuadraditos.forEach(input => {
             input.addEventListener("change", () => {
                  CuadraditosSeleccionado(cantidadCuadraditos);
+                 const aa=localStoreageLeer();
+                 aa.forEach(historial => {
+                    hojaImpresionContainer.innerHTML += historial;
+                 });
             });
         });
     } 
@@ -59,7 +63,10 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-
+function localStoreageLeer() {
+    const historial= JSON.parse(localStorage.getItem("historial")) || [];
+    return historial;
+}
 
 
 

@@ -19,20 +19,19 @@ export function mostrarRecetaDeMasa(cantidad) {
         });
     });
 }
-export function CuadraditosSeleccionado(inputCuadraditos) {
-    inputCuadraditos.forEach(inputCuadraditos => {
+export function CuadraditosSeleccionado(inputCuadraditos) {    
+    inputCuadraditos.forEach(inputCuadraditos => {        
         inputCuadraditos.addEventListener("input", (e) => {
             e.preventDefault();
             const cantidad = e.target.value;            
             hojaImpresionContainer.innerHTML = ` <section class="descripcion-receta-item">
-                    <h3> ${e.target.value}</h3><h3>  ${recetaElegida.mercaderia}:</h3>
-                </section>   `;
+                                                    <h3> ${e.target.value}</h3>
+                                                 </section>   `;
             const recetaElegida = recetas.find(receta => receta.mercaderia === e.target.id);
             recetaElegida.ingredientes.forEach(ingrediente => {
                 let ing = ingrediente.cantidad;
                 let total = Number(ing) * Number(cantidad);
-                hojaImpresionContainer.innerHTML += `
-                          
+                hojaImpresionContainer.innerHTML += `                          
                 <section class="receta-item">
                     <label>${ingrediente.nombre}</label> 
                     <p>${total.toFixed(2)}</p>
@@ -40,7 +39,14 @@ export function CuadraditosSeleccionado(inputCuadraditos) {
                 `;
             });        
     });
+    
 });
+localStoreageGuardar(hojaImpresionContainer);
+}
+function localStoreageGuardar(hojaImpresionContainer) {
+    const historial= JSON.parse(localStorage.getItem("historial")) || [];
+    historial.push(hojaImpresionContainer.innerHTML);
+    localStorage.setItem("historial", JSON.stringify(historial));
 }
 
 
