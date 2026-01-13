@@ -4,6 +4,7 @@ import { MasaDeChocolate } from "../Logica/MASA_DE_CHOCOLATE.JS";
 import { recetas } from "../Logica/CUADRADITOS.js";
 import { mostrarRecetaDeMasa } from "./FUNCIONES.js";
 import { CuadraditosSeleccionado } from "./FUNCIONES.js";
+
  let cantidadCuadraditos;
 document.addEventListener("DOMContentLoaded", () => {    
     const params = new URLSearchParams(window.location.search);
@@ -33,6 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 `;
         });
     }
+  
+
     if (sector === "Cuadraditos") {        
         contenedorMain.innerHTML = '<section id="recetas-lista"></section>';
         const listaRecetas = document.getElementById("recetas-lista");
@@ -43,12 +46,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 <input type="number" id="${receta.mercaderia}" placeholder="Cantidad ">
             </section>
                 `;
-        });
-       
+        });    
                
         contenedorMain.appendChild(hojaImpresionContainer);
-            cantidadCuadraditos = document.querySelectorAll("input[type='number']");
-           CuadraditosSeleccionado(cantidadCuadraditos);
+        cantidadCuadraditos = document.querySelectorAll("input[type='number']");
+        CuadraditosSeleccionado(cantidadCuadraditos);
         cantidadCuadraditos.forEach(input => {
             input.addEventListener("change", () => {
                  CuadraditosSeleccionado(cantidadCuadraditos);
