@@ -1,8 +1,6 @@
-import { recetas } from "../Logica/CUADRADITOS.js";
-import { contenedorMain, hojaImpresionContainer} from "../Logica/CONST.js";
+import {  hojaImpresionContainer} from "../Logica/CONST.js";
 import { Masa } from "../Logica/MASA.js";
-let cuadraditos=[];
-let contador=0;
+
 export function mostrarRecetaDeMasa(cantidad) {
     cantidad.addEventListener("input", (e) => {
         e.preventDefault();
