@@ -1,4 +1,4 @@
-import {containerRecetas} from "../Logica/CONST.js";
+import {containerRecetas} from "../Logica/CONST";
   
 
 export class Receta {
