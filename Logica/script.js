@@ -1,4 +1,4 @@
-import { Receta } from "./Logica/recetas.js";
+import { Receta } from "./recetas.js";
 /* const btnCategorias = document.querySelectorAll("button");
 btnCategorias.forEach(btn => {
   btn.addEventListener("click", () => irARecetas(btn.textContent));
